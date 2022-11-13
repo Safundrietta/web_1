@@ -1,8 +1,15 @@
+@font-face {
+    font-family: 'Comforta';
+    font-style: normal;
+    font-weight: 300;
+    src: url(s/comfortaa/v40/1Pt_g8LJRfWJmhDAuUsSQamb1W0lwk4S4TbMPrQ.ttf) format('truetype')
+}
+
 * {
     margin:0;
     padding:0;
     box-sizing: border-box;
-    font-family: --;
+    font-family: Comforta;
     font-size: 32px
 }
 
@@ -11,13 +18,20 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(to bottom right, #162947? #0c1628)
+    background: linear-gradient(to bottom right, #162947, #0c1628)
 }
 
 ul{
     position: relative;
-    transform: skewY(-15deg)
+    transform: skewY(-15deg);
 }
+
+ul.second {
+    position: relative;
+    transform: skewY(-15deg);
+    left: 15vh;
+}
+
 
 ul li{
     position: relative;
@@ -26,7 +40,18 @@ ul li{
     background: #0f4382;
     padding: 15px;
     z-index: var(--i);
-    transition: .Ss
+    transition: .5s;
+    box-shadow: 0px 0px 5px;
+}
+
+ul li img {
+    position: absolute;
+    left: -35px;
+    bottom: 10px;
+    width: 30px;
+    height: 70%;
+    transform-origin: right;
+    transform: skewY(45deg);
 }
 
 ul li:hover{
@@ -39,12 +64,12 @@ ul li:hover{
             -10px 0 80px #096de9, 10px 0 80px #0f52a4
 }
 
-ul li:hover:before{
+ul li:hover::before{
     background: #0f52a4;
     box-shadow: 0px 0px 10px #fff;
 }
 
-ul li:hover:after{
+ul li:hover::after{
     background: #0f52a4;
     box-shadow: 0px 0px 10px #fff;
 }
@@ -63,7 +88,7 @@ ul li::before{
     box-shadow: 0px 0px 1px #fff;
 }
 
-ur li::after{
+ul li::after{
     content: "";
     position: absolute;
     top: -40px;
@@ -77,7 +102,7 @@ ur li::after{
     box-shadow: 0px 0px 1px #fff;
 }
 
-ur li a{
+ul li a{
     text-decoration: none;
     color: #b7b7b7;
     display: block;
@@ -85,11 +110,11 @@ ur li a{
     transition: .5s;
 }
 
-ut li:hover a{
-    color: #fff;
+ul li:hover a{
+    color: #ffff;
 }
 
-ur li:last-child::after{
+ul li:last-child::after{
     box-shadow: -100px 100px 20px
         rgb(10,10,10,.25)
 }
